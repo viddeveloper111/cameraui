@@ -107,7 +107,7 @@ All notable changes to this project will be documented in this file.
 ## Bugfixes
 - Fixed an issue where the notification in the interface referred to a saved recording even though recordings were disabled
 - Fixed an issue where the recorded video could not be sent via Telegram
-- Fix ffmpeg command `-stimeout`
+- Fix ffmpeg command `-rw_timeout`
 - Minor bugfixes
 
 # v1.1.7 - 2022-04-15
