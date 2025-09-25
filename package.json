@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider && npm run watch",
     "watch": "concurrently \"npm run watch:server\" \"npm run watch:ui\"",
-  "watch:server": "node --trace-warnings bin/camera.ui.js -L 2 -S ./test/camera.ui",
+    "watch:server": "node --trace-warnings bin/camera.ui.js -L 2 -S ./test/camera.ui",
     "watch:ui": "cross-env NODE_OPTIONS=--openssl-legacy-provider && npm run serve --prefix ui",
     "start:ui":"node server.js",
     "build": "npm run build --prefix ui",

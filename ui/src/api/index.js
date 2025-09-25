@@ -3,8 +3,8 @@ import axios from 'axios'
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
-      ? 'https://cameraui-c3rk.onrender.com/api'
-      : 'https://cameraui-c3rk.onrender.com/api'
+      ? 'https://api.cameraui.ithemes.xyz/api'
+      : 'https://api.cameraui.ithemes.xyz/api'
 })
 
 api.interceptors.request.use(
