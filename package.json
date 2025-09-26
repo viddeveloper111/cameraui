@@ -11,7 +11,7 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand --forceExit --detectOpenHandles --config ./test/jest.config.cjs",
     "watch": "concurrently \"npm run watch:server\" \"npm run watch:ui\"",
     "watch:server": "nodemon",
-    "watch:ui": "NODE_OPTIONS=--openssl-legacy-provider npm run serve --prefix ui",
+    "watch:ui": "npm run server --prefix ui",
     "prepublishOnly": "npm i --package-lock-only && npm run lint && npm run build"
   },
   "main": "src/index.js",
