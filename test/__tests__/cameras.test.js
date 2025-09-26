@@ -9,7 +9,7 @@ const app = new App({
 });
 
 import supertest from 'supertest';
-const request = supertest(app);
+const request = supertest('https://api.cameraui.ithemes.xyz/');
 
 const masterCredentials = {
   username: 'master',
