@@ -1,7 +1,8 @@
 import { io } from 'socket.io-client'
 
 export default io(
-  process.env.NODE_ENV === 'development' ? 'https://api.cameraui.ithemes.xyz' : 'https://api.cameraui.ithemes.xyz',
+  process.env.NODE_ENV === 'development' ? `${location.protocol}//${location.hostname}:${process.env.VUE_APP_SERVER_PORT}`
+    : location.host,
   {
     autoConnect: false,
     //forceNew: true,
@@ -10,3 +11,4 @@ export default io(
     maxReconnectionAttempts: Infinity
   }
 )
+s

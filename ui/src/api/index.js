@@ -3,8 +3,8 @@ import axios from 'axios'
 const api = axios.create({
   baseURL:
     process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test'
-      ? 'https://api.cameraui.ithemes.xyz/api'
-      : 'https://api.cameraui.ithemes.xyz/api'
+      ? `${location.protocol}//${location.hostname}:${process.env.VUE_APP_SERVER_PORT}/api`
+      : `${location.origin}/api`
 })
 
 api.interceptors.request.use(
