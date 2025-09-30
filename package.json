@@ -10,7 +10,7 @@
     "lint:ui": "npm run lint --prefix ui",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand --forceExit --detectOpenHandles --config ./test/jest.config.cjs",
     "watch": "npm run watch:server & npm run watch:ui",
-    "watch:server": "nodemon",
+    "watch:server": "node --trace-warnings bin/camera.ui.js -L 2 -S ./test/camera.ui",
     "watch:ui": "npm run serve --prefix ui",
     "prepublishOnly": "npm i --package-lock-only && npm run lint && npm run build"
   },
